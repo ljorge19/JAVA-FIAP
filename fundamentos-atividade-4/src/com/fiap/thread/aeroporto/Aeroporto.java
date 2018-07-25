@@ -12,7 +12,15 @@ public class Aeroporto extends Thread {
 	@Override
 	public void run() {
 		while(true) {
-			alterarEstadoPista();
+			alterarEstadoPista(true);
+			
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}		
+			
+             alterarEstadoPista(false);
 			
 			try {
 				Thread.sleep(3000);
@@ -36,9 +44,12 @@ public class Aeroporto extends Thread {
 		
 	}
 	
-	public synchronized void alterarEstadoPista() {
-		//pistaDisponivel = disponivel;				
+	public synchronized void alterarEstadoPista(Boolean disponivel) {
+		
+		if (disponivel == true){
+		pistaDisponivel = disponivel;				
 		notifyAll();
+		}
 	}
 	
 }
