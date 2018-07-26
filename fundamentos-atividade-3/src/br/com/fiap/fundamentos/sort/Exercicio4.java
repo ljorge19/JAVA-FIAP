@@ -10,18 +10,20 @@ public class Exercicio4 {
 	public static void main(String[] args) {
 
 		List<Pessoa> pessoas = new ArrayList<>();
-		pessoas.add(new Pessoa("TONY STARK", 45, 'M', "STARK INDUSTRIES"));
-		pessoas.add(new Pessoa("BRUCE WAYNE", 39, 'M', "WAYNE INTERPRISES"));
-		pessoas.add(new Pessoa("NATASHA ROMANOFF", 37, 'F', "AVENGERS"));
-		pessoas.add(new Pessoa("STEVE ROGERS", 90, 'M', "AVENGERS"));
-		pessoas.add(new Pessoa("LOGAN", 87, 'M', "XMAN"));
+		pessoas.add(new Pessoa("João Garcia", 20, 'M', "AIK Enterprises"));
+		pessoas.add(new Pessoa("Maria Martins", 44, 'F', "Simples"));
+		pessoas.add(new Pessoa("Henrique Fernando", 43, 'F', "AIK Enterprises"));
+		pessoas.add(new Pessoa("Inácio Luís", 33, 'M', "Magazine André"));
+		pessoas.add(new Pessoa("Fernando Ferreira", 87, 'M', "Casas Recife"));
 
+		//LISTA SORT NORMAL
 		System.out.println("--------------------------------------------------------------------------------");
 		System.out.println("Lista normal");
 		System.out.println("--------------------------------------------------------------------------------");
 		for (Pessoa pessoa : pessoas)
 			System.out.println(pessoa.toString());
 
+		//LISTA EM ORDEM CRESCENTE
 		Collections.sort(pessoas, new Comparator<Pessoa>() {
 			@Override
 			public int compare(Pessoa p1, Pessoa p2) {
@@ -29,6 +31,7 @@ public class Exercicio4 {
 			}
 		});
 
+		
 		System.out.println();
 		System.out.println("--------------------------------------------------------------------------------");
 		System.out.println("Lista em ordem crescente");
@@ -36,6 +39,8 @@ public class Exercicio4 {
 		for (Pessoa pessoa : pessoas)
 			System.out.println(pessoa.toString());
 
+		
+		//LISTA EM ORDEM DECRESCENTE
 		Collections.sort(pessoas, new Comparator<Pessoa>() {
 			@Override
 			public int compare(Pessoa p1, Pessoa p2) {
@@ -51,17 +56,16 @@ public class Exercicio4 {
 			System.out.println(pessoa.toString());
 
 		
-		
-		
+		//REMOVE ELEMENTO DA LISTA
 			  for (int i = 0; i < pessoas.size(); i++) {
-			    if (pessoas.get(i).getNome().equals("STEVE ROGERS")) {
+			    if (pessoas.get(i).getNome().equals("Inácio Luís")) {
 			    	pessoas.remove(i);
 			    }
 			  }
 
 		System.out.println();
 		System.out.println("--------------------------------------------------------------------------------");
-		System.out.println("retirando o elemento \"STEVE ROGERS\" da lista");
+		System.out.println("retirando o elemento \"Inácio Luís\" da lista");
 		System.out.println("--------------------------------------------------------------------------------");
 		
 		for (Pessoa pessoa : pessoas)
