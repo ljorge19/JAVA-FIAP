@@ -7,6 +7,7 @@ public class Exercicio2 {
 
 	public static void main(String [] args) {
 		
+		
 		LocalDateTime localDateTime = LocalDateTime.now();
 		
 		// 2012-09-10 12:00
@@ -19,6 +20,10 @@ public class Exercicio2 {
 		date = formatter.format(localDateTime);		
 		System.out.println(date);
 				
+		formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd"); 
+		date = formatter.format(localDateTime);		
+		System.out.println(date);
+		
 		// Monday (dia da semana)
 		formatter = DateTimeFormatter.ofPattern("EEEE"); 
 		date = formatter.format(localDateTime);		
