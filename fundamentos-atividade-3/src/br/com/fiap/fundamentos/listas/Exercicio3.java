@@ -28,21 +28,21 @@ public class Exercicio3 {
 		List<Integer> arrayList = new ArrayList<>();
 		List<Integer> linkedList = new LinkedList<>();
 		
-		long arrayListPopulateTime = test.populate(arrayList, SIZE);
-		long linkedListPopulateTime = test.populate(linkedList, SIZE);
-		String fasterListToPopulate = arrayListPopulateTime < linkedListPopulateTime ? "ArrayList" : "LinkedList";
+		long arrayListpopularTime = test.populate(arrayList, SIZE);
+		long linkedListpopularTime = test.populate(linkedList, SIZE);
+		String fasterListparapopular = arrayListpopularTime < linkedListpopularTime ? "ArrayList" : "LinkedList";
 		
-		System.out.println("The ArrayList took " + arrayListPopulateTime + " ms to populate");
-		System.out.println("The LinkedList took " + linkedListPopulateTime + " ms to populate");
-		System.out.println("The " + fasterListToPopulate + " is faster to populate!\n"); 
+		System.out.println("O ArrayList levou " + arrayListpopularTime + " ms para popular");
+		System.out.println("O LinkedList levou " + linkedListpopularTime + " ms para popular");
+		System.out.println("O " + fasterListparapopular + "  é mais rapido para popular!\n"); 
 		
 		long arrayListSearchTime = test.find(arrayList, INDEX);
 		long linkedListSearchTime = test.find(linkedList, INDEX);
-		String fasterListToSearch = arrayListSearchTime < linkedListSearchTime ? "ArrayList" : "LinkedList";
+		String fasterListparaSearch = arrayListSearchTime < linkedListSearchTime ? "ArrayList" : "LinkedList";
 		
-		System.out.println("The ArrayList took " + arrayListSearchTime + " ms to find an item");
-		System.out.println("The LinkedList took " + linkedListSearchTime + " ms to find an item");
-		System.out.println("The " + fasterListToSearch + " is faster to find an item!\n");
+		System.out.println("O ArrayList levou " + arrayListSearchTime + " ms para encontrar um item");
+		System.out.println("O LinkedList levou " + linkedListSearchTime + " ms para encontrar um item");
+		System.out.println("O " + fasterListparaSearch + "  é mais rapido para encontrar um item!\n");
 	}
 	
 	private void testSet() {
@@ -51,21 +51,21 @@ public class Exercicio3 {
 		Stack<Integer> stack = new Stack<>();
 		Set<Integer> set = new HashSet<>();
 		
-		long stackPopulateTime = test.populate(stack, SIZE);
-		long hashSetPopulateTime = test.populate(set, SIZE);
-		String fasterSetToPopulate = stackPopulateTime < hashSetPopulateTime ? "Stack" : "HashSet";
+		long stackpopularTime = test.populate(stack, SIZE);
+		long hashSetpopularTime = test.populate(set, SIZE);
+		String fasterSetparapopular = stackpopularTime < hashSetpopularTime ? "Stack" : "HashSet";
 		
-		System.out.println("The Stack took " + stackPopulateTime + " ms to populate");
-		System.out.println("The HashSet took " + hashSetPopulateTime + " ms to populate");
-		System.out.println("The " + fasterSetToPopulate + " is faster to populate!\n"); 
+		System.out.println("O Stack levou " + stackpopularTime + " ms para popular");
+		System.out.println("O HashSet levou " + hashSetpopularTime + " ms para popular");
+		System.out.println("O " + fasterSetparapopular + "  é mais rapido para popular!\n"); 
 		
 		long stackSearchTime = test.find(stack, INDEX);
 		long hashSetSearchTime = test.find(set, INDEX);
-		String fasterSetToSearch = stackSearchTime < hashSetSearchTime ? "Stack" : "HashSet";
+		String fasterSetparaSearch = stackSearchTime < hashSetSearchTime ? "Stack" : "HashSet";
 		
-		System.out.println("The Stack took " + stackSearchTime + " ms to find an item");
-		System.out.println("The HashSet took " + hashSetSearchTime + " ms to find an item");
-		System.out.println("The " + fasterSetToSearch + " is faster to find an item!\n");
+		System.out.println("O Stack levou " + stackSearchTime + " ms para encontrar um item");
+		System.out.println("O HashSet levou " + hashSetSearchTime + " ms para encontrar um item");
+		System.out.println("O " + fasterSetparaSearch + "  é mais rapido para encontrar um item!\n");
 	}
 	
 	private void testMap() {
@@ -74,21 +74,21 @@ public class Exercicio3 {
 		Map<Integer, Integer> hashMap = new HashMap<>();
 		Map<Integer, Integer> weakHashMap = new WeakHashMap<>();
 		
-		long hashMapPopulateTime = test.populate(hashMap, SIZE);
-		long weakHashMapPopulateTime = test.populate(weakHashMap, SIZE);
-		String fasterMapToPopulate = hashMapPopulateTime < weakHashMapPopulateTime ? "HashMap" : "WeakHashMap";
+		long hashMappopularTime = test.populate(hashMap, SIZE);
+		long weakHashMappopularTime = test.populate(weakHashMap, SIZE);
+		String fasterMapparapopular = hashMappopularTime < weakHashMappopularTime ? "HashMap" : "WeakHashMap";
 		
-		System.out.println("The HashMap took " + hashMapPopulateTime + " ms to populate");
-		System.out.println("The WeakHashMap took " + weakHashMapPopulateTime + " ms to populate");
-		System.out.println("The " + fasterMapToPopulate + " is faster to populate!\n"); 
+		System.out.println("O HashMap levou " + hashMappopularTime + " ms para popular");
+		System.out.println("O WeakHashMap levou " + weakHashMappopularTime + " ms para popular");
+		System.out.println("O " + fasterMapparapopular + "  é mais rapido para popular!\n"); 
 		
 		long hashMapSearchTime = test.find(hashMap, INDEX);
 		long weakHashMapSearchTime = test.find(weakHashMap, INDEX);
-		String fasterMapToSearch = hashMapSearchTime < weakHashMapSearchTime ? "HashMap" : "WeakHashMap";
+		String fasterMapparaSearch = hashMapSearchTime < weakHashMapSearchTime ? "HashMap" : "WeakHashMap";
 		
-		System.out.println("The HashMap took " + hashMapSearchTime + " ms to find an item");
-		System.out.println("The WeakHashMap took " + weakHashMapSearchTime + " ms to find an item");
-		System.out.println("The " + fasterMapToSearch + " is faster to find an item!");		
+		System.out.println("O HashMap levou " + hashMapSearchTime + " ms para encontrar um item");
+		System.out.println("O WeakHashMap levou " + weakHashMapSearchTime + " ms para encontrar um item");
+		System.out.println("O " + fasterMapparaSearch + " é mais rapido para encontrar um item!");		
 	}
 	
 }
